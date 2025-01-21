@@ -4,7 +4,13 @@ metadata:
   name: testimage-deployment
   namespace: test-isstream
 spec:
+  selector:
+    matchLabels:
+      app: nginx
   template:
+    metadata:
+      labels:
+        app: nginx
     spec:
       containers:
       - name: test
